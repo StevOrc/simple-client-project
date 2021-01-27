@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t geksdk01/simple-client -f ./client/Dockerfile.dev ./client
+
+after_success:
+  - docker build -t geksdk01/simple-client ./client
+  - docker push geksdk01/simple-client
