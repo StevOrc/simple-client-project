@@ -31,7 +31,7 @@ class App extends Component {
       <div>
         <Header />
         <div className="ui container" style={{ marginTop: "20px" }}>
-          <h1 className="ui header">Car application</h1>
+          <h1 className="ui header">Car application TEST</h1>
           <CarsList cars={this.state.cars} />
         </div>
       </div>
