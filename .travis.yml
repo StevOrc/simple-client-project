@@ -6,4 +6,5 @@ before_install:
   - docker build -t stevorc/simple-client -f ./client/Dockerfile.dev ./client
 after_success:
   - docker build -t geksdk01/simple-client ./client
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push geksdk01/simple-client
