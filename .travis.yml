@@ -5,6 +5,6 @@ services:
 before_install:
   - docker build -t stevorc/simple-client -f ./client/Dockerfile.dev ./client
 
-after_success:
-  - docker build -t geksdk01/simple-client ./client
-  - docker push geksdk01/simple-client
+# after_success:
+#   - docker build -t geksdk01/simple-client ./client
+#   - docker push geksdk01/simple-client
